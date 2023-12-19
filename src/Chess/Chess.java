@@ -11,7 +11,7 @@ public class Chess
     public static int moveNum = 0;
     // public static Player player = new Player();
     public static BoardComponent board;
-    public static Piece[][] position = new Piece[8][8];
+    public static Piece[][] position = new Piece[8][8]; // adds 2d array for the piece positions
 
     public static void main(String[] args)
     {
@@ -21,21 +21,13 @@ public class Chess
 
         // Kings
         position[4][7] = new King(true);
-        position[4][3] = new Queen(false);
+        position[4][0] = new King(false);
 
-        position[5][2] = new Rook(true);
-        position[5][3] = new Rook(true);
-        position[5][4] = new Rook(true);
-        position[3][2] = new Rook(true);
-        position[3][3] = new Rook(true);
-        position[3][4] = new Rook(true);
-        position[4][2] = new Rook(true);
-        position[4][4] = new Rook(true);
-/*
+
         // Pawns
         for(int i = 0; i <= 7; i++)
         {
-            //position[i][1] = new Pawn(false);
+            position[i][1] = new Pawn(false);
             position[i][6] = new Pawn(true);
         }
         // Knights
@@ -57,7 +49,7 @@ public class Chess
         position[5][7] = new Bishop(true);
 
         position[2][0] = new Bishop(false);
-        position[5][0] = new Bishop(false);  */
+        position[5][0] = new Bishop(false);  
 
         //Start making board
         JFrame frame = new JFrame("Chess");
